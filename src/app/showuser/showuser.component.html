@@ -1,0 +1,29 @@
+
+<div class="row">
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Password</th>
+          <th>Visibility</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.fname}}</td>
+          <td>{{user.lname}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.number}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.visibility}}</td>
+          <td><button class="btn btn-danger" (click)="onDelete(user.id)">delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
